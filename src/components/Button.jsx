@@ -1,5 +1,10 @@
 import PropTypes from 'prop-types';
 
+
+/** 
+ * Button
+*/
+
 export const Button = ({ variant, children, onClick }) => {
     const styles = {
         primary: 'bg-primary text-white',
@@ -18,6 +23,16 @@ export const Button = ({ variant, children, onClick }) => {
     );
 };
 
+Button.propTypes = {
+    variant: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired,
+    onClick: PropTypes.func
+}
+
+/**
+ * Outline Button
+ */
+
 export const OutlineButton = ({ variant, children, onClick }) => {
     const styles = {
         primary: 'outline outline-2 outline-outline-primary text-primary',
@@ -34,12 +49,6 @@ export const OutlineButton = ({ variant, children, onClick }) => {
         </button>
     );
 };
-
-Button.propTypes = {
-    variant: PropTypes.string.isRequired,
-    children: PropTypes.node.isRequired,
-    onClick: PropTypes.func
-}
 
 OutlineButton.propTypes = {
     variant: PropTypes.string.isRequired,
